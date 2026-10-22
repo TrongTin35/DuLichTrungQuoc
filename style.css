@@ -283,3 +283,21 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+/* Quy định ẩn/hiện Menu trên điện thoại */
+@media (max-width: 768px) {
+  #navMenu {
+    display: none; /* Mặc định ẩn danh sách menu */
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  #navMenu.active {
+    display: flex !important; /* Hiện menu khi bấm vào nút ☰ */
+  }
+}
