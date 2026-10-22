@@ -1,0 +1,106 @@
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+  });
+}
+
+// Nút quay về đầu trang
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+  window.addEventListener("scroll", function () {
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  topBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt tour | China Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="index.html">CHINA<span> TRAVEL</span></a>
+
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="destinations.html">Điểm đến</a>
+        <a href="food.html">Ẩm thực</a>
+        <a href="culture.html">Văn hóa</a>
+        <a href="tips.html">Kinh nghiệm</a>
+        <a class="active" href="booking.html">Đặt tour</a>
+        <a href="contact.html">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <p>CHINA TRAVEL</p>
+    <h1>Đặt tour Trung Quốc</h1>
+    <p>Chọn hành trình yêu thích và bắt đầu chuyến đi của bạn.</p>
+</section>
+
+<main class="container">
+    <div class="contact-box">
+        <h2>Thông tin đặt tour</h2>
+
+        <form id="bookingForm">
+
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname"
+                   placeholder="Nhập họ và tên" required>
+
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone"
+                   placeholder="Nhập số điện thoại" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email"
+                   placeholder="Nhập email" required>
+
+            <label for="tour">Chọn tour</label>
+            <select id="tour" required>
+                <option value="">-- Chọn điểm đến --</option>
+                <option>Thượng Hải - Hàng Châu - Tô Châu</option>
+                <option>Bắc Kinh - Vạn Lý Trường Thành</option>
+                <option>Trương Gia Giới - Phượng Hoàng Cổ Trấn</option>
+                <option>Quế Lâm - Dương Sóc</option>
+            </select>
+
+            <label for="departure">Ngày khởi hành dự kiến</label>
+            <input type="date" id="departure" required>
+
+            <label for="people">Số lượng khách</label>
+            <input type="number" id="people"
+                   min="1" max="50" value="1" required>
+
+            <label for="note">Yêu cầu thêm</label>
+            <textarea id="note" rows="4"
+                      placeholder="Nhập yêu cầu của bạn..."></textarea>
+
+            <button type="submit">Gửi yêu cầu đặt tour</button>
+
+            <p id="bookingMessage" aria-live="polite"></p>
+        </form>
+    </div>
+</main>
+
+<footer>
+    © 2026 China Travel | Khám phá vẻ đẹp Trung Quốc
+</footer>
+
+</body>
+</html>

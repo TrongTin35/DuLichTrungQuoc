@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ | China Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <a class="logo" href="index.html">CHINA<span> TRAVEL</span></a>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="destinations.html">Điểm đến</a>
+        <a href="food.html">Ẩm thực</a>
+        <a href="culture.html">Văn hóa</a>
+        <a href="tips.html">Kinh nghiệm</a>
+		<a href="booking.html">Đặt tour</a>
+        <a class="active" href="contact.html">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <p>CHÚNG TÔI LUÔN SẴN SÀNG</p>
+    <h1>Liên hệ với China Travel</h1>
+    <p>Gửi câu hỏi hoặc chia sẻ địa điểm Trung Quốc mà bạn yêu thích.</p>
+</section>
+
+<main class="container">
+    <div class="contact-box">
+        <h2>Gửi lời nhắn</h2>
+        <form id="contactForm">
+            <label for="name">Họ và tên</label>
+            <input id="name" name="name" type="text" placeholder="Nhập họ và tên" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Nhập email" required>
+
+            <label for="subject">Chủ đề</label>
+            <select id="subject" name="subject" required>
+                <option value="">-- Chọn chủ đề --</option>
+                <option>Điểm đến du lịch</option>
+                <option>Ẩm thực Trung Quốc</option>
+                <option>Kinh nghiệm du lịch</option>
+                <option>Khác</option>
+            </select>
+
+            <label for="message">Nội dung</label>
+            <textarea id="message" name="message" rows="5" placeholder="Nhập lời nhắn của bạn..." required></textarea>
+
+            <button type="submit">Gửi lời nhắn</button>
+        </form>
+        <p id="formMessage" aria-live="polite"></p>
+    </div>
+</main>
+
+<footer>© 2026 China Travel | Khám phá vẻ đẹp Trung Quốc</footer>
+</body>
+</html>
