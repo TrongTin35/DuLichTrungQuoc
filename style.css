@@ -301,3 +301,29 @@ footer p {
     display: flex !important; /* Hiện menu khi bấm vào nút ☰ */
   }
 }
+/* --- Tùy chỉnh cho phần Video --- */
+.video-section {
+  text-align: center; /* Căn giữa tiêu đề */
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* Tỷ lệ khung hình 16:9 chuẩn của video */
+  height: 0;
+  overflow: hidden;
+  max-width: 1000px; /* Độ rộng tối đa của video */
+  margin: 30px auto 0; /* Căn giữa khung video */
+  border-radius: 12px; /* Bo góc khung video */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Đổ bóng nhẹ cho đẹp */
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover; /* Giúp video hiển thị đẹp, không bị méo tỷ lệ */
+}
+
