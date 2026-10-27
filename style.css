@@ -326,4 +326,70 @@ footer p {
   border: 0;
   object-fit: cover; /* Giúp video hiển thị đẹp, không bị méo tỷ lệ */
 }
+/* Custom CSS cho Menu di động & Nút cuộn trang */
+@media (max-width: 768px) {
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+  }
+  
+  #navMenu.active {
+    display: flex;
+  }
+}
 
+/* Style cho nút cuộn lên đầu trang (Top Button) */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#topBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Bố cục dàn trang Giới thiệu */
+.info-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.info-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.info-text, .info-img {
+  flex: 1;
+}
+
+.info-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .info-row, .info-row.reverse {
+    flex-direction: column;
+  }
+}
